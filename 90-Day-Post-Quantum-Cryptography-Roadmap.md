@@ -33,6 +33,7 @@ As of September 2026, NIST's first three finalized PQC standards are:
 NIST selected **HQC** for standardization in March 2025 as an additional KEM, and work on additional signature algorithms continues. Always check the current NIST material before treating this roadmap's algorithm list as permanently final.
 
 Sources:
+
 - NIST PQC project: https://csrc.nist.gov/Projects/Post-Quantum-Cryptography
 - FIPS 203/204/205 information: https://csrc.nist.gov/Projects/Post-Quantum-Cryptography/Post_Quantum_Cryptography-Standardization
 - NIST PQC publications: https://csrc.nist.gov/Projects/post-quantum-cryptography/publications
@@ -69,6 +70,7 @@ Every day has four parts:
 ---
 
 # PHASE 1 — Mathematical Foundations
+
 ## Days 1–20
 
 The objective is not to become a mathematician. It is to acquire the mathematical language used by cryptography.
@@ -77,17 +79,23 @@ The objective is not to become a mathematician. It is to acquire the mathematica
 
 ## Day 1 — Cryptography Map
 
+`Done`
+`Date: 25|09|2026`
+
 Learn:
+
 - Symmetric vs asymmetric cryptography
 - Encryption vs authentication vs signatures
 - Classical cryptography vs PQC
 - Why quantum computers matter
 
 Build:
+
 - Create the repository.
 - Write a one-page `what-is-pqc.md`.
 
 Checkpoint:
+
 - What exactly is "post-quantum"?
 - Why is PQC not the same thing as quantum cryptography?
 
@@ -96,6 +104,7 @@ Checkpoint:
 ## Day 2 — Integers, Divisibility and Primes
 
 Learn:
+
 - Divisibility
 - Prime numbers
 - Composite numbers
@@ -103,6 +112,7 @@ Learn:
 - Fundamental theorem of arithmetic
 
 Implement:
+
 - Prime checker
 - Prime generator
 - Trial-division factorization
@@ -115,13 +125,16 @@ Project:
 ## Day 3 — GCD
 
 Learn:
+
 - Greatest common divisor
 - Euclidean algorithm
 
 Implement:
+
 - `gcd(a, b)`
 
 Challenge:
+
 - Count how many Euclidean steps are required for different inputs.
 
 ---
@@ -129,10 +142,12 @@ Challenge:
 ## Day 4 — Extended Euclidean Algorithm
 
 Learn:
+
 - Bézout identity
 - Extended GCD
 
 Implement:
+
 - `extended_gcd(a, b)`
 
 Understand:
@@ -143,11 +158,13 @@ Understand:
 ## Day 5 — Modular Arithmetic
 
 Learn:
+
 - Congruence
 - Addition/multiplication modulo n
 - Modular equivalence
 
 Implement:
+
 - Modular calculator
 
 Checkpoint:
@@ -160,10 +177,12 @@ Explain why:
 ## Day 6 — Modular Inverses
 
 Learn:
+
 - What an inverse modulo n means
 - When an inverse exists
 
 Implement:
+
 - `mod_inverse(a, n)` using extended GCD
 
 Project upgrade:
@@ -188,10 +207,12 @@ Without tutorials:
 ## Day 8 — Exponentiation
 
 Learn:
+
 - Modular exponentiation
 - Repeated squaring
 
 Implement:
+
 - Fast modular exponentiation
 
 Challenge:
@@ -202,10 +223,12 @@ Compare naive exponentiation with repeated squaring.
 ## Day 9 — Fermat's Little Theorem
 
 Learn:
+
 - Fermat's Little Theorem
 - Why primes appear everywhere in cryptography
 
 Implement:
+
 - A modular exponentiation experiment that verifies the theorem for many small primes.
 
 ---
@@ -213,17 +236,20 @@ Implement:
 ## Day 10 — Euler's Totient Function
 
 Learn:
+
 - `φ(n)`
 - Coprime numbers
 - Euler's theorem
 
 Implement:
+
 - `phi(n)`
 
 Mini-project:
 **Number Theory Explorer**
 
 Features:
+
 - prime test
 - gcd
 - phi
@@ -235,10 +261,12 @@ Features:
 ## Day 11 — Chinese Remainder Theorem
 
 Learn:
+
 - CRT
 - Why a problem can be split into smaller modular problems
 
 Implement:
+
 - CRT for pairwise-coprime moduli.
 
 ---
@@ -246,15 +274,18 @@ Implement:
 ## Day 12 — Probability Fundamentals
 
 Learn:
+
 - Sample space
 - Events
 - Conditional probability
 - Independence
 
 Implement:
+
 - Coin/dice simulation.
 
 Connect it to:
+
 - Randomness in cryptography.
 
 ---
@@ -262,6 +293,7 @@ Connect it to:
 ## Day 13 — Random Variables
 
 Learn:
+
 - Random variables
 - Expected value
 - Variance
@@ -275,12 +307,14 @@ Simulate a random process 100,000 times and compare empirical results with theor
 ## Day 14 — Information and Entropy
 
 Learn:
+
 - Information intuition
 - Entropy
 - Min-entropy
 - Why predictable randomness is dangerous
 
 Do not confuse:
+
 - Random-looking output
 - Cryptographically secure randomness
 
@@ -289,6 +323,7 @@ Do not confuse:
 ## Day 15 — Vectors
 
 Learn:
+
 - Vectors
 - Addition
 - Scalar multiplication
@@ -296,6 +331,7 @@ Learn:
 - Norms
 
 Implement:
+
 - Vector operations from scratch.
 
 ---
@@ -303,12 +339,14 @@ Implement:
 ## Day 16 — Matrices
 
 Learn:
+
 - Matrix representation
 - Matrix multiplication
 - Identity matrix
 - Inverses
 
 Implement:
+
 - Matrix multiplication.
 
 ---
@@ -316,12 +354,14 @@ Implement:
 ## Day 17 — Linear Algebra
 
 Learn:
+
 - Linear independence
 - Basis
 - Span
 - Rank
 
 Connect:
+
 - Why linear algebra appears in lattice cryptography.
 
 ---
@@ -329,12 +369,14 @@ Connect:
 ## Day 18 — Polynomials
 
 Learn:
+
 - Polynomial arithmetic
 - Degree
 - Polynomial multiplication
 - Remainders
 
 Implement:
+
 - Polynomial addition/multiplication.
 
 ---
@@ -342,6 +384,7 @@ Implement:
 ## Day 19 — Finite Fields Preview
 
 Learn:
+
 - What a field is
 - Why finite fields matter
 - `GF(p)` intuition
@@ -369,6 +412,7 @@ You pass this phase when you can explain and implement:
 ---
 
 # PHASE 2 — Classical Cryptography
+
 ## Days 21–40
 
 Now you learn the cryptographic world that PQC is trying to protect or replace.
@@ -378,6 +422,7 @@ Now you learn the cryptographic world that PQC is trying to protect or replace.
 ## Day 21 — Cryptographic Goals
 
 Learn:
+
 - Confidentiality
 - Integrity
 - Authentication
@@ -392,12 +437,14 @@ Write:
 ## Day 22 — Hash Functions
 
 Learn:
+
 - One-wayness
 - Collision resistance
 - Preimage resistance
 - Avalanche effect
 
 Use:
+
 - SHA-256 from a standard library.
 
 Important:
@@ -417,6 +464,7 @@ Change one bit of an input and measure how much the output changes.
 ## Day 24 — Symmetric Cryptography
 
 Learn:
+
 - Block ciphers
 - Stream ciphers
 - Keys
@@ -425,6 +473,7 @@ Learn:
 - AEAD
 
 Study:
+
 - AES-GCM conceptually.
 
 ---
@@ -432,6 +481,7 @@ Study:
 ## Day 25 — Secure Password Storage
 
 Learn:
+
 - Password hashing
 - Salt
 - Slow password KDFs
@@ -445,6 +495,7 @@ Build a toy password-storage demo using a proper password hashing library.
 ## Day 26 — Public-Key Cryptography
 
 Learn:
+
 - Public/private keys
 - Trapdoor functions
 - Key establishment
@@ -455,6 +506,7 @@ Learn:
 ## Day 27 — RSA Mathematics
 
 Learn:
+
 - Key generation
 - Euler's theorem
 - Encryption/decryption intuition
@@ -470,6 +522,7 @@ Use tiny educational parameters only.
 ## Day 28 — Break Your Toy RSA
 
 Try:
+
 - Small primes
 - Small keys
 - Naive factorization
@@ -482,6 +535,7 @@ Understand that RSA security depends on parameter sizes and computational assump
 ## Day 29 — Diffie-Hellman
 
 Learn:
+
 - Key exchange
 - Discrete logarithm problem
 - Man-in-the-middle attack
@@ -494,6 +548,7 @@ Implement toy Diffie-Hellman.
 ## Day 30 — Elliptic-Curve Cryptography
 
 Learn conceptually:
+
 - Elliptic-curve points
 - Point addition
 - Scalar multiplication
@@ -506,12 +561,14 @@ You do not need advanced elliptic-curve mathematics yet.
 ## Day 31 — Digital Signatures
 
 Learn:
+
 - Signing
 - Verification
 - Integrity
 - Authentication
 
 Study:
+
 - RSA signatures
 - ECDSA conceptually
 
@@ -520,6 +577,7 @@ Study:
 ## Day 32 — Certificates and PKI
 
 Learn:
+
 - Certificates
 - Certificate authorities
 - Trust chains
@@ -530,6 +588,7 @@ Learn:
 ## Day 33 — TLS
 
 Learn:
+
 - What happens during HTTPS
 - Handshake
 - Key establishment
@@ -544,6 +603,7 @@ Draw your own simplified TLS handshake diagram.
 ## Day 34 — Cryptographic Attacks
 
 Learn:
+
 - Brute force
 - Dictionary attacks
 - MITM
@@ -557,6 +617,7 @@ Learn:
 ## Day 35 — Computational Hardness
 
 Learn:
+
 - Efficient vs infeasible
 - Polynomial vs exponential
 - Security parameters
@@ -571,12 +632,14 @@ Critical question:
 ## Day 36 — Complexity
 
 Learn:
+
 - Big-O
 - Polynomial time
 - Exponential time
 - Sub-exponential intuition
 
 Connect:
+
 - Cryptographic security assumptions.
 
 ---
@@ -588,6 +651,7 @@ Build:
 **Mini Secure Messenger — Classical Edition**
 
 Features:
+
 - Key establishment
 - Symmetric encryption
 - Authentication/integrity
@@ -600,6 +664,7 @@ Keep it educational, not production security.
 ## Day 38 — Why Quantum Changes the Model
 
 Study:
+
 - Classical computer assumptions
 - Quantum computer capabilities
 - Shor
@@ -637,6 +702,7 @@ You should be able to explain:
 ---
 
 # PHASE 3 — Quantum Computing Foundations
+
 ## Days 41–55
 
 You are learning enough quantum computing to understand the threat—not trying to become a quantum physicist.
@@ -646,6 +712,7 @@ You are learning enough quantum computing to understand the threat—not trying 
 ## Day 41 — Quantum vs Classical Information
 
 Learn:
+
 - Bit
 - Qubit
 - State vector intuition
@@ -655,6 +722,7 @@ Learn:
 ## Day 42 — Complex Numbers
 
 Learn:
+
 - Complex numbers
 - Magnitude
 - Phase
@@ -667,6 +735,7 @@ This connects directly to quantum state mathematics.
 ## Day 43 — Qubit Mathematics
 
 Learn:
+
 - Dirac notation intuition
 - Basis states
 - Superposition
@@ -677,11 +746,13 @@ Learn:
 ## Day 44 — Measurement
 
 Learn:
+
 - Measurement
 - Probabilities
 - Collapse as an operational model
 
 Build:
+
 - Tiny qubit measurement simulator.
 
 ---
@@ -689,6 +760,7 @@ Build:
 ## Day 45 — Quantum Gates
 
 Learn:
+
 - X
 - Z
 - H
@@ -704,6 +776,7 @@ Represent small state vectors and apply simple gates.
 ## Day 46 — Multiple Qubits
 
 Learn:
+
 - Tensor-product intuition
 - Two-qubit states
 - Entanglement
@@ -713,6 +786,7 @@ Learn:
 ## Day 47 — Quantum Circuits
 
 Build:
+
 - Small circuit simulator for selected gates.
 
 ---
@@ -720,6 +794,7 @@ Build:
 ## Day 48 — Grover's Algorithm
 
 Learn:
+
 - Search problem
 - Classical search
 - Quantum speedup intuition
@@ -732,6 +807,7 @@ Grover gives roughly a quadratic speedup for generic unstructured search, which 
 ## Day 49 — Shor's Algorithm Deep Dive
 
 Study:
+
 - Factoring
 - Period finding
 - Why the quantum part matters
@@ -744,13 +820,13 @@ Draw the pipeline.
 
 Create a table:
 
-| Classical primitive | Quantum concern |
-|---|---|
-| RSA | Shor |
-| Diffie-Hellman | Shor |
-| ECC | Shor |
-| AES | Grover-related search speedup |
-| SHA-2 | Grover-related generic search considerations |
+| Classical primitive | Quantum concern                              |
+| ------------------- | -------------------------------------------- |
+| RSA                 | Shor                                         |
+| Diffie-Hellman      | Shor                                         |
+| ECC                 | Shor                                         |
+| AES                 | Grover-related search speedup                |
+| SHA-2               | Grover-related generic search considerations |
 
 Explain the table in your own words.
 
@@ -759,6 +835,7 @@ Explain the table in your own words.
 ## Day 51 — Quantum Security Thinking
 
 Learn:
+
 - Security levels
 - Attack cost
 - Asymptotic vs concrete security
@@ -796,6 +873,7 @@ Answer:
 > If RSA/ECC are threatened, what kinds of mathematical problems could replace factoring/discrete logarithms?
 
 Research:
+
 - Lattice problems
 - Codes
 - Hashes
@@ -807,11 +885,12 @@ Research:
 
 **Project 3 complete: Quantum Threat Lab**
 
-You should now understand *why* PQC exists.
+You should now understand _why_ PQC exists.
 
 ---
 
 # PHASE 4 — Post-Quantum Cryptography
+
 ## Days 56–75
 
 This is the core of the challenge.
@@ -834,6 +913,7 @@ Learn the major families:
 ## Day 57 — What Is a Lattice?
 
 Learn:
+
 - Lattice
 - Basis
 - Lattice vectors
@@ -842,6 +922,7 @@ Learn:
 - Norm
 
 Implement:
+
 - 2D lattice visualizer.
 
 ---
@@ -849,6 +930,7 @@ Implement:
 ## Day 58 — Lattice Geometry
 
 Study:
+
 - Short vectors
 - Long vectors
 - Basis changes
@@ -864,6 +946,7 @@ Input a 2D basis and plot lattice points.
 ## Day 59 — SVP and CVP
 
 Learn:
+
 - Shortest Vector Problem
 - Closest Vector Problem
 
@@ -883,6 +966,7 @@ Learn the intuition:
 `b = A·s + e`
 
 where:
+
 - `A` is public
 - `s` is secret
 - `e` is small noise
@@ -915,6 +999,7 @@ Observe how parameter size changes the problem.
 ## Day 63 — Polynomial Rings
 
 Learn:
+
 - Polynomial addition
 - Multiplication
 - Reduction modulo a polynomial
@@ -925,6 +1010,7 @@ Learn:
 ## Day 64 — Ring-LWE
 
 Learn:
+
 - Why polynomials can compress structure
 - Ring-LWE intuition
 - Why structured algebra is useful
@@ -934,6 +1020,7 @@ Learn:
 ## Day 65 — Module-LWE
 
 Learn:
+
 - Modules as a middle ground between vectors and rings
 - Why Module-LWE is important to modern NIST-standardized lattice schemes
 
@@ -942,6 +1029,7 @@ Learn:
 ## Day 66 — SIS
 
 Learn:
+
 - Short Integer Solution
 - Relationship to lattice problems
 - Why SIS appears in signatures
@@ -951,6 +1039,7 @@ Learn:
 ## Day 67 — KEMs
 
 Learn:
+
 - Key Encapsulation Mechanism
 - Key generation
 - Encapsulation
@@ -967,6 +1056,7 @@ Understand the distinction:
 Study FIPS 203 at a high level.
 
 Trace:
+
 - Key generation
 - Encapsulation
 - Decapsulation
@@ -981,6 +1071,7 @@ Do not attempt to memorize the standard.
 ## Day 69 — ML-KEM Parameter Exploration
 
 Compare the standardized parameter sets and investigate:
+
 - Key sizes
 - Ciphertext sizes
 - Shared-secret behavior
@@ -995,6 +1086,7 @@ Use official standards/current documentation.
 Use a vetted implementation/library.
 
 Your job:
+
 - Generate keys
 - Encapsulate
 - Decapsulate
@@ -1007,6 +1099,7 @@ Your job:
 ## Day 71 — Lattice Signature Intuition
 
 Learn:
+
 - Why signatures need a different construction
 - SIS
 - Fiat-Shamir intuition
@@ -1019,6 +1112,7 @@ Learn:
 Study FIPS 204 at a high level.
 
 Trace:
+
 - Key generation
 - Signing
 - Verification
@@ -1031,6 +1125,7 @@ Trace:
 ## Day 73 — Hash-Based Signatures
 
 Learn:
+
 - Merkle trees
 - One-time signatures
 - Hash-based signature construction
@@ -1050,18 +1145,19 @@ Understand why a hash-based signature standard is valuable as a different mathem
 
 Create a comparison matrix:
 
-| Family | Main idea | Example | Main trade-offs |
-|---|---|---|---|
-| Lattice | Hard lattice-related problems | ML-KEM, ML-DSA | Size/complexity |
-| Hash | Security from hashes | SLH-DSA | Signature size/performance |
-| Code | Hard decoding problems | HQC | Different implementation/size trade-offs |
-| Other | Alternative assumptions | Research candidates | Varies |
+| Family  | Main idea                     | Example             | Main trade-offs                          |
+| ------- | ----------------------------- | ------------------- | ---------------------------------------- |
+| Lattice | Hard lattice-related problems | ML-KEM, ML-DSA      | Size/complexity                          |
+| Hash    | Security from hashes          | SLH-DSA             | Signature size/performance               |
+| Code    | Hard decoding problems        | HQC                 | Different implementation/size trade-offs |
+| Other   | Alternative assumptions       | Research candidates | Varies                                   |
 
 Do not rank them globally. Compare them by measurable properties and use cases.
 
 ---
 
 # PHASE 5 — Standards, Engineering & Security
+
 ## Days 76–85
 
 Now move from "I understand the math" to "I understand how PQC is deployed."
@@ -1075,6 +1171,7 @@ Start reading selected portions of FIPS 203.
 Do not read it cover-to-cover.
 
 Learn to locate:
+
 - Definitions
 - Algorithms
 - Parameters
@@ -1087,6 +1184,7 @@ Learn to locate:
 ## Day 77 — Read FIPS 204
 
 Focus on:
+
 - ML-DSA algorithm flow
 - Inputs/outputs
 - Key/signature sizes
@@ -1097,6 +1195,7 @@ Focus on:
 ## Day 78 — Read FIPS 205
 
 Focus on:
+
 - Hash-based construction
 - Signing
 - Verification
@@ -1107,6 +1206,7 @@ Focus on:
 ## Day 79 — Crypto Agility
 
 Learn:
+
 - Why systems should not hard-code one cryptographic algorithm
 - Algorithm identifiers
 - Versioning
@@ -1121,6 +1221,7 @@ Design a crypto-agile API interface.
 ## Day 80 — Hybrid Cryptography
 
 Learn the idea of combining:
+
 - Classical key establishment
 - PQ key establishment
 
@@ -1131,6 +1232,7 @@ Understand why organizations may use hybrid approaches during migration.
 ## Day 81 — PQC Migration
 
 Learn:
+
 - Crypto inventory
 - Vulnerable algorithm discovery
 - Dependencies
@@ -1153,6 +1255,7 @@ Do not treat this as proof that a large cryptographically relevant quantum compu
 ## Day 83 — Side-Channel Awareness
 
 Learn:
+
 - Timing attacks
 - Cache attacks
 - Power analysis
@@ -1168,6 +1271,7 @@ Critical lesson:
 ## Day 84 — Secure Implementation Engineering
 
 Study:
+
 - Secure randomness
 - Memory safety
 - Constant-time operations
@@ -1183,6 +1287,7 @@ Study:
 Audit your previous projects.
 
 For each one, write:
+
 - Threat model
 - Secrets
 - Attack surface
@@ -1192,6 +1297,7 @@ For each one, write:
 ---
 
 # PHASE 6 — Capstone
+
 ## Days 86–90
 
 This is where everything comes together.
@@ -1270,6 +1376,7 @@ Add tests.
 Add a signature layer.
 
 Test:
+
 - Valid signature
 - Modified message
 - Wrong public key
@@ -1331,9 +1438,11 @@ If you can explain the entire system without reading your notes, you have comple
 # Major Projects
 
 ## Project 1 — Number Theory Explorer
+
 **Days 2–20**
 
 Python CLI containing:
+
 - prime checking
 - factorization
 - GCD
@@ -1346,9 +1455,11 @@ Python CLI containing:
 ---
 
 ## Project 2 — Classical Secure Messenger
+
 **Days 27–40**
 
 Educational system demonstrating:
+
 - public-key key establishment
 - symmetric encryption
 - authentication
@@ -1358,9 +1469,11 @@ Educational system demonstrating:
 ---
 
 ## Project 3 — Quantum Threat Lab
+
 **Days 41–55**
 
 Build:
+
 - qubit simulator
 - gate simulator
 - measurement experiment
@@ -1370,9 +1483,11 @@ Build:
 ---
 
 ## Project 4 — LWE Laboratory
+
 **Days 60–66**
 
 Build:
+
 - LWE instance generator
 - noise generator
 - toy encryption
@@ -1380,15 +1495,18 @@ Build:
 - parameter experiment
 
 Graph:
+
 - dimension vs attack effort
 - noise vs decryption behavior
 
 ---
 
 ## Project 5 — Lattice Visualizer
+
 **Days 57–60**
 
 Interactive 2D visualization of:
+
 - lattice basis
 - lattice points
 - shortest vectors
@@ -1397,6 +1515,7 @@ Interactive 2D visualization of:
 ---
 
 ## Project 6 — PQC Secure Messenger
+
 **Days 86–90**
 
 Final capstone using standardized PQC primitives through a vetted implementation.
@@ -1431,36 +1550,47 @@ At the end of every 7 days, close your notes.
 Answer from memory.
 
 ### Week 1
+
 Can you solve modular arithmetic problems?
 
 ### Week 2
+
 Can you explain probability, vectors, matrices, and finite fields?
 
 ### Week 3
+
 Can you explain hash functions and symmetric cryptography?
 
 ### Week 4
+
 Can you explain RSA, DH, ECC, signatures, and TLS?
 
 ### Week 5
+
 Can you explain why Shor threatens RSA/ECC?
 
 ### Week 6
+
 Can you manipulate qubits and explain Grover/Shor conceptually?
 
 ### Week 7
+
 Can you explain lattice problems?
 
 ### Week 8
+
 Can you explain LWE, Ring-LWE, Module-LWE, and SIS?
 
 ### Week 9
+
 Can you explain ML-KEM, ML-DSA, and SLH-DSA?
 
 ### Week 10
+
 Can you explain PQC migration and crypto agility?
 
 ### Final
+
 Can you teach PQC to another programmer?
 
 ---
@@ -1555,6 +1685,7 @@ Your 90 days are only **Level 1**.
 ## Level 2 — Cryptography Engineer
 
 Study:
+
 - Applied cryptographic libraries
 - TLS
 - PKI
@@ -1565,6 +1696,7 @@ Study:
 - Protocol engineering
 
 Build:
+
 - PQC-enabled client/server
 - Crypto-agile protocol
 - PQC certificate experiment
@@ -1574,6 +1706,7 @@ Build:
 ## Level 3 — Mathematical Cryptography
 
 Study deeply:
+
 - Abstract algebra
 - Probability
 - Number theory
@@ -1582,6 +1715,7 @@ Study deeply:
 - Complexity theory
 
 Read:
+
 - Textbooks
 - Survey papers
 - NIST standards
@@ -1592,6 +1726,7 @@ Read:
 ## Level 4 — PQC Research
 
 Study:
+
 - Lattice reductions
 - Security proofs
 - Attack algorithms
